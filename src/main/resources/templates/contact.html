@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contact Us - Everest Echoes</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/artists">Our Artists</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+<main>
+    <h1>Contact Us</h1>
+    <form name="contactForm" action="/send-message" method="post" onsubmit="return validateForm()">
+        <input type="text" name="name" placeholder="Your Name"/>
+        <input type="email" name="email" placeholder="Your Email"/>
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</main>
+<footer>
+    <p>&copy; 2024 Everest Echoes. All rights reserved.</p>
+</footer>
+</body>
+</html>

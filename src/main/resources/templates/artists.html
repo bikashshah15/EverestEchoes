@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Our Artists - Everest Echoes</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/artists">Our Artists</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+<main>
+    <h1>Our Artists</h1>
+    <ul>
+        <li th:each="artist : ${artists}">
+            <span th:text="${artist.name}">Artist Name</span>
+            <p th:text="${artist.description}">Artist Description</p>
+        </li>
+    </ul>
+</main>
+<footer>
+    <p>&copy; 2024 Everest Echoes. All rights reserved.</p>
+</footer>
+</body>
+</html>
